@@ -8,6 +8,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     //ON CREATE
+    //Creates the Activity UI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
