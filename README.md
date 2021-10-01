@@ -1,5 +1,4 @@
-# Sacred-Timeline
-Protect this Timeline at all possible cost, do not make unnecessary pull requests to this repository
+
 # Sacred-Timeline
 Protect this Timeline at all possible cost, do not make unnecessary pull requests to this repository.
 </br></br>
