@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EncrytionApp</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="message">Message</string>
+    <string name="select_recipient">Select Recipient</string>
+    <string name="message">Message</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="the_encryptor">The Encryptor</string>
 </resources>

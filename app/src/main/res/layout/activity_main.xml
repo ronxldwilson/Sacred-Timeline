@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:padding="10dp"
-            android:text="The Encryptor"
+            android:text="@string/the_encryptor"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="34sp" />
@@ -32,25 +32,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Enter Message "
+            android:text="@string/enter_message"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
-            android:layout_height="161dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#060606"
+            android:backgroundTintMode="add"
             android:ems="10"
-            android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+            android:hint="@string/message"
+            android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
             android:textColor="#FFFFFF"
-            android:textColorHint="#000000" />
+            android:textColorHint="#B6B6B6" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:padding="10dp"
-            android:text="Select Recipient "
+            android:text="@string/select_recipient"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -59,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Message"
+            android:hint="@string/message"
             android:inputType="textPersonName"
             android:text="WillBeReplacedByDropDown"
             android:textColor="#FFFFFF" />
@@ -68,12 +71,12 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:text="Encrypt " />
+            android:text="@string/encrypt" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="131dp"
-            android:text="Decrypt" />
+            android:text="@string/decrypt" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
