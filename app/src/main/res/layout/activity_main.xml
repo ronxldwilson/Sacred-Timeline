@@ -20,6 +20,8 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:padding="10dp"
             android:text="The Encryptor"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
@@ -29,6 +31,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="Enter Message "
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
@@ -46,6 +49,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:padding="10dp"
             android:text="Select Recipient "
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
