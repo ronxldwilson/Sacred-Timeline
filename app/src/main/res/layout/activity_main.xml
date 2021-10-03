@@ -71,13 +71,19 @@
         <Button
             android:id="@+id/encryptButton"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="78dp"
             android:text="@string/encrypt" />
 
         <Button
             android:id="@+id/decryptButton"
             android:layout_width="match_parent"
-            android:layout_height="131dp"
+            android:layout_height="80dp"
             android:text="@string/decrypt" />
+
+        <Button
+            android:id="@+id/addUser"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
