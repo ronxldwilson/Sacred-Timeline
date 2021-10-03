@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="732dp"
+        android:layout_width="300dp"
+        android:layout_height="607dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="161dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000" />
 
