@@ -37,14 +37,15 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/message"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:backgroundTint="#060606"
             android:backgroundTintMode="add"
             android:ems="10"
             android:hint="@string/message"
             android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
+            android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#B6B6B6" />
 
@@ -60,7 +61,7 @@
         <EditText
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="78dp"
             android:ems="10"
             android:hint="@string/message"
             android:inputType="textPersonName"
@@ -68,13 +69,13 @@
             android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/encryptButton"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:text="@string/encrypt" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/decryptButton"
             android:layout_width="match_parent"
             android:layout_height="131dp"
             android:text="@string/decrypt" />
