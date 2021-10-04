@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="607dp"
+        android:layout_width="345dp"
+        android:layout_height="649dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,46 +27,59 @@
             android:textColor="#FFFFFF"
             android:textSize="34sp" />
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="@string/enter_message"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:layout_height="301dp"
+            android:background="#6692FF"
+            android:backgroundTint="#6692FF"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <EditText
-            android:id="@+id/message"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:backgroundTint="#060606"
-            android:backgroundTintMode="add"
-            android:ems="10"
-            android:hint="@string/message"
-            android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#B6B6B6" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="10dp"
+                android:text="@string/enter_message"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:padding="10dp"
-            android:text="@string/select_recipient"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#9FBAF9"
+                android:backgroundTint="#060606"
+                android:backgroundTintMode="add"
+                android:ems="10"
+                android:hint="@string/message"
+                android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B6B6B6" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:ems="10"
-            android:hint="@string/message"
-            android:inputType="textPersonName"
-            android:text="WillBeReplacedByDropDown"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="10dp"
+                android:text="@string/select_recipient"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="#9FBAF9"
+                android:ems="10"
+                android:hint="@string/message"
+                android:inputType="textPersonName"
+                android:text="WillBeReplacedByDropDown"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/encryptButton"
@@ -84,6 +97,6 @@
             android:id="@+id/addUser"
             android:layout_width="match_parent"
             android:layout_height="84dp"
-            android:text="Button" />
+            android:text="Add User" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
