@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="@string/the_encryptor"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
@@ -55,12 +55,10 @@
                 android:backgroundTintMode="add"
                 android:ems="10"
                 android:hint="@string/message"
-                android:hintTextColor="#5D4037"
                 android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
                 android:minHeight="48dp"
                 android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF" />
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView2"
