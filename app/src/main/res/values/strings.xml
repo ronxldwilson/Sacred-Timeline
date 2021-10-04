@@ -11,7 +11,7 @@
     <string name="new_user">New User</string>
     <string name="name">Name</string>
     <string name="paste_code_here">Paste code here</string>
-    <string name="add_user">Add User</string>
+
     <string name="enter_hash_code">Enter Hash Code</string>
     <string name="enter_user_name">Enter User Name</string>
 </resources>

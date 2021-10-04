@@ -8,9 +8,10 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="313dp"
-        android:layout_height="611dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,8 +55,10 @@
                 android:backgroundTintMode="add"
                 android:ems="10"
                 android:hint="@string/message"
+                android:hintTextColor="#5D4037"
                 android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
                 android:minHeight="48dp"
+                android:padding="10dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF" />
 
@@ -86,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="#40C4FF"
-            android:text="@string/encrypt"/>
+            android:text="@string/encrypt" />
 
         <Button
             android:id="@+id/decryptButton"
