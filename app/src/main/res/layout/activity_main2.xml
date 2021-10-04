@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:lineSpacingExtra="34sp"
-            android:text="New User"
+            android:text="@string/new_user"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="48sp" />
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="10dp"
-                android:text="Enter User Name"
+                android:text="@string/enter_user_name"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -52,7 +52,7 @@
                 android:background="#9FBAF9"
                 android:backgroundTint="#9FBAF9"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:textColor="#000000"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="10dp"
-                android:text="Enter Hash Code"
+                android:text="@string/enter_hash_code"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_height="119dp"
                 android:background="#9FBAF9"
                 android:ems="10"
-                android:hint="Paste code here"
+                android:hint="@string/paste_code_here"
                 android:inputType="textMultiLine|textPersonName"
                 android:padding="10dp"
                 android:textColor="#000000"
@@ -87,7 +87,7 @@
             android:layout_height="96dp"
             android:backgroundTint="#FFA43D"
             android:fontFamily="@font/roboto_bold"
-            android:text="Add User"
+            android:text="@string/add_user"
             android:textSize="24sp"
             android:typeface="normal" />
     </LinearLayout>

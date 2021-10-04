@@ -100,6 +100,6 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="#40C4FF"
-            android:text="Add User" />
+            android:text="@string/add_user" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
