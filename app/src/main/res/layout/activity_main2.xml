@@ -85,7 +85,11 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="96dp"
-            android:text="Add User" />
+            android:backgroundTint="#FFA43D"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Add User"
+            android:textSize="24sp"
+            android:typeface="normal" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
