@@ -32,7 +32,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="375dp"
-            android:background="#6692FF"
+            android:background="@drawable/layout_bg"
+            android:backgroundTint="#6692FF"
             android:orientation="vertical"
             android:padding="10dp">
 
