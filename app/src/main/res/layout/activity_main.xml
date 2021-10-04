@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="649dp"
+        android:layout_width="364dp"
+        android:layout_height="663dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
                 android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
                 android:minHeight="48dp"
                 android:textColor="#FFFFFF"
-                android:textColorHint="#B6B6B6" />
+                android:textColorHint="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -84,19 +84,22 @@
         <Button
             android:id="@+id/encryptButton"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#40C4FF"
             android:text="@string/encrypt" />
 
         <Button
             android:id="@+id/decryptButton"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:backgroundTint="#40C4FF"
             android:text="@string/decrypt" />
 
         <Button
             android:id="@+id/addUser"
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#40C4FF"
             android:text="Add User" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
