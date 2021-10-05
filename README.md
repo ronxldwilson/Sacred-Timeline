@@ -3,7 +3,7 @@
 Protect this Timeline at all possible cost, do not make unnecessary pull requests to this repository.
 </br></br>
 
-<h1>How to Contribute<h1>
+<h1>How to Contribute</h1>
   
 </br>
 Step 1: Fork this Repository and create a copy with yourself
