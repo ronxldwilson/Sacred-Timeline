@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    //This method changes the app action bar color
     public void menuColorChange(){
         setContentView(R.layout.activity_main);
         ActionBar actionBar;
@@ -32,21 +34,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         menuColorChange();
 
-        Button button = findViewById(R.id.addUser);
+        Button addUserButton = findViewById(R.id.addUser);
         Button decryptButton = findViewById(R.id.decryptButton);
         Button encryptButton = findViewById(R.id.encryptButton);
 
-        button.setOnClickListener(view -> {
+        addUserButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent);
         });
         
         decryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show());
         encryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "world", Toast.LENGTH_SHORT).show());
-
-
     }
-
-
-
 }
