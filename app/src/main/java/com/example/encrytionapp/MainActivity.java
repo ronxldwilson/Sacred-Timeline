@@ -11,10 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void menuColorChange(){
         setContentView(R.layout.activity_main);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
@@ -28,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
         // Set BackgroundDrawable
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        menuColorChange();
 
         Button button = findViewById(R.id.addUser);
         Button decryptButton = findViewById(R.id.decryptButton);
@@ -40,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         
         decryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show());
         encryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "world", Toast.LENGTH_SHORT).show());
+
+
     }
+
+
 
 }
