@@ -70,16 +70,11 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="78dp"
-                android:background="#9FBAF9"
-                android:ems="10"
-                android:hint="@string/message"
-                android:inputType="textPersonName"
-                android:text="WillBeReplacedByDropDown"
-                android:textColor="#FFFFFF" />
+                android:layout_height="match_parent" />
+
         </LinearLayout>
 
         <Button
