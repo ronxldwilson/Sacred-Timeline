@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4074F2"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -14,88 +14,84 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
-            android:padding="10dp"
-            android:text="@string/the_encryptor"
+            android:lineSpacingExtra="34sp"
+            android:text="@string/new_user"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="321dp"
+            android:layout_height="375dp"
             android:background="@drawable/layout_bg"
             android:backgroundTint="#6692FF"
             android:orientation="vertical"
             android:padding="10dp">
-            <!--            android:background="#6692FF"-->
+
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="10dp"
-                android:text="@string/enter_message"
+                android:text="@string/enter_user_name"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/message"
+                android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="85dp"
                 android:background="#9FBAF9"
-                android:backgroundTint="#060606"
-                android:backgroundTintMode="add"
+                android:backgroundTint="#9FBAF9"
                 android:ems="10"
-                android:hint="@string/message"
-                android:inputType="textLongMessage|textMultiLine|textNoSuggestions|textCapSentences"
-                android:minHeight="48dp"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
                 android:padding="10dp"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="10dp"
-                android:text="@string/select_recipient"
+                android:text="@string/enter_hash_code"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
-            <Spinner
-                android:id="@+id/spinner"
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
+                android:layout_height="119dp"
+                android:background="#9FBAF9"
+                android:ems="10"
+                android:hint="@string/paste_code_here"
+                android:inputType="textMultiLine|textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/encryptButton"
+            android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="#40C4FF"
-            android:text="@string/encrypt" />
-
-        <Button
-            android:id="@+id/decryptButton"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="#40C4FF"
-            android:text="@string/decrypt" />
-
-        <Button
-            android:id="@+id/addUser"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="#40C4FF"
-            android:text="@string/add_user" />
+            android:layout_height="96dp"
+            android:backgroundTint="#FFA43D"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/add_user"
+            android:textSize="24sp"
+            android:typeface="normal" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

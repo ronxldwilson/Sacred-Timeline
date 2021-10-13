@@ -2,7 +2,9 @@
 # Sacred-Timeline
 Protect this Timeline at all possible cost, do not make unnecessary pull requests to this repository.
 </br></br>
-How to Contribute:
+
+<h1>How to Contribute</h1>
+  
 </br>
 Step 1: Fork this Repository and create a copy with yourself
 </br>
@@ -31,5 +33,11 @@ Create a branch for a new feature >>>>> Check if this branch can make commits to
 
 </br></br>If No, then>>>> There is a merge conflict resolve it and then make a pull request >>>>> Merge Conflicts will not be resolved at Sacred Timeline</br>
 
-<h1>Naming Conventions </h1></br>
-I will add this later 
+<h1>Naming Conventions/procedure  </h1></br>
+<br>1: Give the name to your new branch as "Name/FeatureName"
+<br>2: Once the feature is ready create a pull request to ask the sacred timeline to add this new feature to main timeline
+<br>3: Once the feature has been accepted in the timeline then procced on to make update your remote repo with the sacred timeline 
+<br>4: Once your forked remote is in sync with the sacred timeline, go to android studio terminal and type out "git pull --rebase" 
+<br>5: Make sure while typing out the above command you are in your master branch
+<br>6: Once your local master is in sync with the sacred timeline, it is safe to delete the old branch and proceed with creating a new branch and creating new features in it
+
