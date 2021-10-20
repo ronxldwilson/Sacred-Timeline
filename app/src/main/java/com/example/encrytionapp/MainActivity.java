@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -18,10 +19,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Enumerator for possible States of the activity
+    public enum State {
+        PROCESSING,     //Short duration when buttons are being loaded, event-listeners are being attached, etc.
+        READY,          //Ready-state, waiting for user to hit Encrypt/Decrypt button
+        ENCRYPTED,      //User has hit encrypt button once  <--  Copy Button can be made visible only during this state
+        DECRYPTED       //User has hit decrypt button once
+    }
+    State currentState;
+
+    //Makes sense to use these as booleans instead of States (see ^), since they can be performed simultaneously/not in order
+    boolean messageEntered;
+    boolean recipientSelected;
+
     EditText messageEditText;
     ImageButton copyButton,clearButton;
+
+
     //This method changes the app action bar color
-    public void menuColorChange(){
+    public void menuColorChange() {
         setContentView(R.layout.activity_main);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
@@ -42,8 +58,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         menuColorChange();
 
+        //Defines current state of the activity, initial state is PROCESSING by default
+        currentState = State.PROCESSING;
+
         ImageButton copyButton = findViewById(R.id.copy);
-        ImageButton clearButton=findViewById(R.id.clear);
+        ImageButton clearButton = findViewById(R.id.clear);
         Button addUserButton = findViewById(R.id.addUser);
         Button decryptButton = findViewById(R.id.decryptButton);
         Button encryptButton = findViewById(R.id.encryptButton);
@@ -54,10 +73,21 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent);
         });
+
         //considering assignment of on-click listeners
-        //Assigning On-Click Listeners
-        decryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show());
-        encryptButton.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "world", Toast.LENGTH_SHORT).show());
+        //Assigning Encrypt & Decrypt Button On-Click Listeners
+        decryptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                decryptMessage();
+            }
+        });
+        encryptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                encryptMessage();
+            }
+        });
 
         //Copy to Clip Board Functionality
         copyButton.setOnClickListener(view -> {
@@ -69,11 +99,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //clear button functionality
-        clearButton.setOnClickListener(view->{
-            DialogInterface.OnClickListener dialogClickListener=new DialogInterface.OnClickListener(){
-                public void onClick(DialogInterface dialog,int which){
-                    switch(which){
-                        case DialogInterface.BUTTON_POSITIVE:messageEditText.setText("");
+        clearButton.setOnClickListener(view -> {
+            //State goes back to READY, waiting for new Encryption/Decryption request, only if CLEAR button is pressed after encryption
+            if(currentState == State.ENCRYPTED)
+                currentState = State.READY;
+
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which){
+                    switch(which) {
+                        case DialogInterface.BUTTON_POSITIVE:
+                            messageEditText.setText("");
                             Toast.makeText(MainActivity.this,"Text box has been cleared!",Toast.LENGTH_SHORT).show();
                             break;
                         case DialogInterface.BUTTON_NEGATIVE:
@@ -81,9 +116,23 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             };
-            AlertDialog.Builder builder=new AlertDialog.Builder(this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure?").setPositiveButton("Please clear!",dialogClickListener).setNegativeButton("Don't clear!",dialogClickListener).show();
         });
 
+        //current state is updated to READY after completion of all initial processes
+        currentState = State.READY;
+    }
+
+    private void encryptMessage() {
+        //Encryption Algorithm
+        currentState = State.ENCRYPTED;
+        Toast.makeText(getApplicationContext(), "Message Encrypted", Toast.LENGTH_SHORT).show();
+    }
+
+    private void decryptMessage() {
+        //Decryption Algorithm
+        currentState = State.DECRYPTED;
+        Toast.makeText(getApplicationContext(), "Message Decrypted", Toast.LENGTH_SHORT).show();
     }
 }
