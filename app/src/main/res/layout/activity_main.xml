@@ -36,6 +36,7 @@
             android:orientation="vertical"
             android:padding="10dp">
             <!--            android:background="#6692FF"-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,13 +52,19 @@
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
+                <ImageButton
+                    android:id="@+id/copy"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    app:srcCompat="?attr/actionModeCopyDrawable" />
+
+                <ImageButton
+                    android:id="@+id/clear"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="5dp"
-                    android:text="Copy" />
+                    app:srcCompat="@android:drawable/ic_menu_delete" />
+
             </LinearLayout>
 
             <EditText
@@ -111,5 +118,6 @@
             android:layout_height="80dp"
             android:backgroundTint="#40C4FF"
             android:text="@string/add_user" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
