@@ -42,16 +42,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         menuColorChange();
 
-        copyButton=findViewById(R.id.copy);
-        clearButton=findViewById(R.id.clear);
+        ImageButton copyButton = findViewById(R.id.copy);
+        ImageButton clearButton=findViewById(R.id.clear);
         Button addUserButton = findViewById(R.id.addUser);
         Button decryptButton = findViewById(R.id.decryptButton);
         Button encryptButton = findViewById(R.id.encryptButton);
         EditText messageEditText = findViewById(R.id.message);
 
-
-
-
+        //Opens Activity_main_2 where the user can add the public keys of contacts and their names
         addUserButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent);
@@ -75,8 +73,7 @@ public class MainActivity extends AppCompatActivity {
             DialogInterface.OnClickListener dialogClickListener=new DialogInterface.OnClickListener(){
                 public void onClick(DialogInterface dialog,int which){
                     switch(which){
-                        case DialogInterface.BUTTON_POSITIVE:
-                            messageEditText.setText("");
+                        case DialogInterface.BUTTON_POSITIVE:messageEditText.setText("");
                             Toast.makeText(MainActivity.this,"Text box has been cleared!",Toast.LENGTH_SHORT).show();
                             break;
                         case DialogInterface.BUTTON_NEGATIVE:
@@ -87,5 +84,6 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
             builder.setMessage("Are you sure?").setPositiveButton("Please clear!",dialogClickListener).setNegativeButton("Don't clear!",dialogClickListener).show();
         });
+
     }
 }
