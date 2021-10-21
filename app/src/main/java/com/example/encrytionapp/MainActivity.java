@@ -16,7 +16,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
+//To Do
+//The Features to be added in the app
+//1. Figure out a way of storing the Names of new user and their public key in a secure manner,
+//   something like a excel table like functionality
+//2. Add a method by which the name stored gets visible in the drop down menu(Start working on it, once task 2 is finished)
+//3. Create a Navigation drawer menu on the top left side(Hamburger icon):This will contain various other fragments like Home,
+//   Tutorial, Share Public Key, about us, Delete all data(Create just the menu for now, we can add the details later on).
+//4.
 public class MainActivity extends AppCompatActivity {
 
     //Enumerator for possible States of the activity
